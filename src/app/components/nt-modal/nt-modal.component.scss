@@ -1,0 +1,131 @@
+@import "~src/assets/scss/variables";
+
+.default {
+  .modal-component__content__reveal__header{
+    background-color: gray;
+  }
+  button{
+    background-color: gray;
+    border: 1px solid gray;
+  }
+}
+
+.information {
+  .modal-component__content__reveal__header{
+    background-color: $color-information-background;
+  }
+  button{
+    background-color: $color-information-background;
+    border: 1px solid $color-information-background;
+  }
+}
+
+.danger {
+  .modal-component__content__reveal__header{
+    background-color: $color-danger-background;
+  }
+  button{
+    background-color: $color-danger-background;
+    border: 1px solid $color-danger-background;
+  }
+}
+
+.warning {
+  .modal-component__content__reveal__header{
+    background-color: $color-warning-background;
+  }
+  button{
+    background-color: $color-warning-background;
+    border: 1px solid $color-warning-background;
+  }
+}
+
+.modal-component {
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    &__reveal {
+      background: $nt-background-color;
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+
+      max-width: 90%;
+      min-height: 150px;
+
+      &__header{
+        padding: 18px;
+        font-weight: 900;
+        color: $nt-text;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        border-bottom: 1px solid gray;
+
+        div{
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0 10px;
+        }
+
+        &__cancel {
+          width: 30px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__content {
+        padding: 20px 40px;
+        flex: 1;
+
+        max-height: 80vh;
+        overflow: auto;
+
+        &__buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 10px;
+          padding-left: 63%;
+          border-top: 1px solid gray;
+
+          &__button {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .modal-component {
+    &__content {
+      &__reveal {
+        height: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+
+        &__content {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
