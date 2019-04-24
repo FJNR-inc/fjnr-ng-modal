@@ -12,8 +12,9 @@ export class NtModalComponent implements OnInit {
   @Input() title;
   @Input() typeModal: 'default' | 'danger' | 'information' | 'warning' | 'form';
   @Input() generalClass: string;
-  @Input() button1Label = null;
-  @Input() button2Label = null;
+  // @Input() button1 = null;
+  // @Input() button2 = null;
+  @Input() buttons = null;
   @Input() maxWidth = '95%';
   @Input() activated = true;
   @Input() autoClose = false;
@@ -21,8 +22,8 @@ export class NtModalComponent implements OnInit {
 
   @ViewChild('modalContent') modalContent;
 
-  @Output() button1: EventEmitter<any> = new EventEmitter();
-  @Output() button2: EventEmitter<any> = new EventEmitter();
+  // @Output() button1: EventEmitter<any> = new EventEmitter();
+  // @Output() button2: EventEmitter<any> = new EventEmitter();
 
   isModalInformation: boolean;
   isModalForm: boolean;
@@ -37,6 +38,17 @@ export class NtModalComponent implements OnInit {
   constructor(private myModals: MyModalService) {
     if (this.typeModal === undefined) {
       this.typeModal = 'default';
+    }
+
+    if (this.buttons === null) {
+      console.log('www')
+      this.buttons = [
+        {
+          label: 'ok',
+          type: this.typeModal,
+          position: 1
+        }
+      ];
     }
   }
 
@@ -98,32 +110,32 @@ export class NtModalComponent implements OnInit {
   }
 
   clickButton1(): void {
-    this.button1.emit(null);
-    if (this.autoClose) {
-      this.toggle();
-    }
+    // this.button1.emit(null);
+    // if (this.autoClose) {
+    //   this.toggle();
+    // }
   }
 
   clickButton2(): void {
-    this.button2.emit(null);
-    if (this.autoClose) {
-      this.toggle();
-    }
+    // this.button2.emit(null);
+    // if (this.autoClose) {
+    //   this.toggle();
+    // }
   }
 
   getLabelButton1() {
-    if (this.button1Label) {
-      return this.button1Label;
-    } else {
-      return 'shared.yes';
-    }
+    // if (this.button1Label) {
+    //   return this.button1Label;
+    // } else {
+    //   return 'shared.yes';
+    // }
   }
 
   getLabelButton2() {
-    if (this.button2Label) {
-      return this.button2Label;
-    } else {
-      return 'shared.no';
-    }
+    // if (this.button2Label) {
+    //   return this.button2Label;
+    // } else {
+    //   return 'shared.no';
+    // }
   }
 }

@@ -21,7 +21,7 @@ export class AppComponent {
       return;
     }
 
-    modal.button2Label = 'terms.button';
+    // modal.button2Label = 'terms.button';
     modal.toggle();
   }
 
