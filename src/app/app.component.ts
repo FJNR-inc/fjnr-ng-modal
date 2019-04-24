@@ -18,16 +18,11 @@ export class AppComponent {
     const modal = this.myModalService.get(name);
 
     if (!modal) {
-      console.error('No modal named %s', name);
+      // console.error('No modal named %s', name);
       return;
     }
 
     modal.button2Label = 'terms.button';
     modal.toggle();
   }
-
-  cancelReservation() {
-    console.log('ssss');
-  }
-
 }

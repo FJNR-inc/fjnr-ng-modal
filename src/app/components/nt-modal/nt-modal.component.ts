@@ -43,9 +43,9 @@ export class NtModalComponent implements OnInit {
 
     this.myModals.set(this.name, this);
   }
-
   initIconModal(typeModal: string) {
     typeModal = typeModal.toLowerCase();
+
     switch (typeModal) {
       case 'information':
         this.iconModal = this.iconModals.info;
@@ -61,7 +61,6 @@ export class NtModalComponent implements OnInit {
 
   clickOverlay(event: Event) {
     const target = (event.target as HTMLElement);
-    console.log(event)
 
     if (target.classList.contains('modal-component') || target.classList.contains('modal-component__content')) {
       this.toggle();
