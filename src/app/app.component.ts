@@ -13,8 +13,8 @@ export class AppComponent {
     private myModalService: MyModalService,
   ) {}
 
-  toogleModal() {
-    const name = 'form_terms';
+  toogleModal(name) {
+    // const name = 'test_modal';
     const modal = this.myModalService.get(name);
 
     if (!modal) {

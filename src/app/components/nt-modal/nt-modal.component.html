@@ -1,8 +1,8 @@
-<div class="modal-component" (click)="clickOverlay($event)" [style.display]="!show ? 'block' : 'block'" [ngClass]="typeModal">
+<div class="modal-component" (click)="clickOverlay($event)" [style.display]="!show ? 'none' : 'block'" [ngClass]="typeModal">
   <div class="modal-component__content">
     <div class="modal-component__content__reveal" [style.width]="maxWidth">
       <div class="modal-component__content__reveal__header">
-        <a (click)="close()"> <i class="fa fa-times" aria-hidden="true"> </i></a>
+        <a (click)="close()" class="fa_times_close"> <i class="fa fa-times" aria-hidden="true"> </i></a>
         <div>{{ title }}</div>
         <span><i [class]="iconModal"></i></span>
       </div>
