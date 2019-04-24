@@ -22,7 +22,7 @@ export class NtModalComponent implements OnInit {
 
   @ViewChild('modalContent') modalContent;
 
-  // @Output() button1: EventEmitter<any> = new EventEmitter();
+  @Output() clickOnButton: EventEmitter<any> = new EventEmitter();
   // @Output() button2: EventEmitter<any> = new EventEmitter();
 
   isModalInformation: boolean;
@@ -136,5 +136,10 @@ export class NtModalComponent implements OnInit {
     // } else {
     //   return 'shared.no';
     // }
+  }
+
+  clickButton(event) {
+    // console.log($event.target.innerText);
+    this.clickOnButton.emit(event.target.innerText);
   }
 }

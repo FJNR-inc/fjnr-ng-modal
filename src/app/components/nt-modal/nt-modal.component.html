@@ -10,19 +10,6 @@
         <ng-content></ng-content>
       </div>
       <div class="modal-component__content__reveal__content__buttons">
-<!--        <button [disabled]="!activated"-->
-<!--                *ngIf="button1Label || typeModal === 'boolean'"-->
-<!--                class="modal-component__content__reveal__content__buttons__button nt-button"-->
-<!--                (click)="clickButton1()"-->
-<!--                [ngClass]="{'nt-button&#45;&#45;success': typeModal === 'boolean'}">-->
-<!--          {{ getLabelButton1() }}-->
-<!--        </button>-->
-<!--        <button [disabled]="!activated"-->
-<!--                class="modal-component__content__reveal__content__buttons__button nt-button nt-button&#45;&#45;full-width"-->
-<!--                (click)="clickButton2()"-->
-<!--                [ngClass]="{'nt-button&#45;&#45;danger': typeModal === 'boolean'}">-->
-<!--          {{ getLabelButton2() }}-->
-<!--        </button>-->
         <button *ngFor="let button of buttons" (click)="clickButton($event)" [ngClass]="button.type"
                 class="modal-component__content__reveal__content__buttons__button nt-button">
           {{ button.label }}
