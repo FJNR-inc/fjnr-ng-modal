@@ -13,7 +13,22 @@
 </ul>
 
 <app-nt-modal name="test_modal"
+              typeModal="information"
               title="modal"
+              [buttons]="[
+                {
+                  label: 'ok',
+                  type: 'warning'
+                },
+                {
+                  label: 'close',
+                  type: 'default'
+                },
+                {
+                  label: 'close',
+                  type: 'information'
+                }
+              ]"
               maxWidth="600px"
               [autoClose]="true">
   <p>

@@ -41,7 +41,6 @@ export class NtModalComponent implements OnInit {
     }
 
     if (this.buttons === null) {
-      console.log('www')
       this.buttons = [
         {
           label: 'ok',

@@ -23,7 +23,7 @@
 <!--                [ngClass]="{'nt-button&#45;&#45;danger': typeModal === 'boolean'}">-->
 <!--          {{ getLabelButton2() }}-->
 <!--        </button>-->
-        <button *ngFor="let button of buttons" (click)="clickButton($event)"
+        <button *ngFor="let button of buttons" (click)="clickButton($event)" [ngClass]="button.type"
                 class="modal-component__content__reveal__content__buttons__button nt-button">
           {{ button.label }}
         </button>
