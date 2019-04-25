@@ -27,7 +27,7 @@ export class AppComponent {
 
   actionButton(event) {
     const modal = this.myModalService.get(this.name);
-    console.log(event)
+    // console.log(event)
     if (event === 'ok') {
       // console.log('ok');
       this.toogleModal(this.name);
