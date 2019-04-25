@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NtModalComponent } from '../../components/nt-modal/nt-modal.component';
+import { NtModalComponent } from '../../nt-modal.component';
 
 @Injectable({
   providedIn: 'root'

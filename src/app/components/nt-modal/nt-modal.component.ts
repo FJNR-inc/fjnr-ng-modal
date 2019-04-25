@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { MyModalService } from '../../services/my-modal/my-modal.service';
-import {_} from '@biesbjerg/ngx-translate-extract/dist/utils/utils';
+import { MyModalService} from './services/my-modal/my-modal.service';
 
 @Component({
   selector: 'app-nt-modal',
@@ -52,9 +51,9 @@ export class NtModalComponent implements OnInit {
     this.initIconModal(this.typeModal);
     this.isModalInformation = this.typeModal === 'information';
     this.isModalForm = this.typeModal === 'form';
-
     this.myModals.set(this.name, this);
   }
+
   initIconModal(typeModal: string) {
     typeModal = typeModal.toLowerCase();
 
