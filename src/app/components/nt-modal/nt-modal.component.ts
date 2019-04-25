@@ -10,7 +10,7 @@ import {_} from '@biesbjerg/ngx-translate-extract/dist/utils/utils';
 export class NtModalComponent implements OnInit {
   @Input() name: string;
   @Input() title;
-  @Input() typeModal: string;
+  @Input() typeModal: 'default' | 'danger' | 'information' | 'warning' | 'form';
   @Input() generalClass: string;
   @Input() button1Label = null;
   @Input() button2Label = null;
@@ -34,7 +34,11 @@ export class NtModalComponent implements OnInit {
   iconModal = null;
   errorMessage: string;
 
-  constructor(private myModals: MyModalService) { }
+  constructor(private myModals: MyModalService) {
+    if (this.typeModal === undefined) {
+      this.typeModal = 'default';
+    }
+  }
 
   ngOnInit() {
     this.initIconModal(this.typeModal);

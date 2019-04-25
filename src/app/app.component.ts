@@ -3,8 +3,7 @@ import { MyModalService } from './services/my-modal/my-modal.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'fjnr-ng-modal';
@@ -24,5 +23,9 @@ export class AppComponent {
 
     modal.button2Label = 'terms.button';
     modal.toggle();
+  }
+
+  cancelReservation() {
+    console.log('ssss');
   }
 }
