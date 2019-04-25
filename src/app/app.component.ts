@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { MyModalService } from './services/my-modal/my-modal.service';
+import { MyModalService } from './components/nt-modal/services/my-modal/my-modal.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,6 @@ export class AppComponent {
 
   toogleModal(name) {
     this.name = name;
-    // const name = 'test_modal';
     const modal = this.myModalService.get(name);
 
     if (!modal) {
@@ -23,24 +22,19 @@ export class AppComponent {
       return;
     }
 
-    // modal.button2Label = 'terms.button';
     modal.toggle();
-  }
-
-  cancelReservation() {
-    console.log('ssss');
   }
 
   actionButton(event) {
     const modal = this.myModalService.get(this.name);
-
+    console.log(event)
     if (event === 'ok') {
-      console.log('ok');
-      modal.toggle();
+      // console.log('ok');
+      this.toogleModal(this.name);
     } else if (event === 'close') {
-      console.log('close');
+      // console.log('close');
     } else if (event === 'information') {
-      console.log('information');
+      // console.log('information');
     }
   }
 }

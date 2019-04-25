@@ -10,7 +10,7 @@
         <ng-content></ng-content>
       </div>
       <div class="modal-component__content__reveal__content__buttons">
-        <button *ngFor="let button of buttons" (click)="clickButton($event)" [ngClass]="button.type"
+        <button *ngFor="let button of buttons" (click)="clickButton(button.id)" [ngClass]="button.type"
                 class="modal-component__content__reveal__content__buttons__button nt-button">
           {{ button.label }}
         </button>

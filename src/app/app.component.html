@@ -18,15 +18,18 @@
               [buttons]="[
                 {
                   label: 'ok',
-                  type: 'warning'
+                  type: 'warning',
+                  id: 'btn-ok'
                 },
                 {
                   label: 'close',
-                  type: 'default'
+                  type: 'default',
+                  id: 'btn-close'
                 },
                 {
                   label: 'information',
-                  type: 'information'
+                  type: 'information',
+                  id: 'btn-info'
                 }
               ]"
               (clickOnButton)="actionButton($event)"
