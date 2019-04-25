@@ -119,14 +119,48 @@
         &__buttons {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-end;
           padding: 10px;
-          padding-left: 80%;
           border-top: 1px solid gray;
 
           &__button {
             height: 30px;
+            width: 100px;
+            margin: 1px;
             cursor: pointer;
+          }
+
+          //force button color
+          &__button.warning{
+            background-color: $color-warning-background !important;
+            border: 1px solid $color-warning-background !important;
+          }
+          &__button.warning:hover{
+            background-color: $color-warning-hover-background !important;
+          }
+
+          &__button.information{
+            background-color: $color-information-background !important;
+            border: 1px solid $color-information-background !important;
+          }
+          &__button.information:hover{
+            background-color: $color-information-hover-background !important;
+          }
+
+          &__button.danger{
+            background-color: $color-danger-background !important;
+            border: 1px solid $color-danger-background !important;
+          }
+          &__button.danger:hover{
+            background-color: $color-danger-hover-background !important;
+          }
+
+          &__button.default{
+            background-color: $color-default-background !important;
+            border: 1px solid $color-default-background !important;
+          }
+          &__button.default:hover{
+            background-color: $color-default-hover-background !important;
           }
         }
       }
@@ -148,3 +182,4 @@
     }
   }
 }
+

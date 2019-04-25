@@ -13,10 +13,26 @@
 </ul>
 
 <app-nt-modal name="test_modal"
-              typeModal="warning"
+              typeModal="information"
               title="modal"
-              button2Label="{{ 'profile.cancel_reservation_button' }}"
-              (button2)="cancelReservation()"
+              [buttons]="[
+                {
+                  label: 'ok',
+                  type: 'warning',
+                  id: 'btn-ok'
+                },
+                {
+                  label: 'close',
+                  type: 'default',
+                  id: 'btn-close'
+                },
+                {
+                  label: 'information',
+                  type: 'information',
+                  id: 'btn-close'
+                }
+              ]"
+              (clickOnButton)="actionButton($event)"
               maxWidth="600px"
               [autoClose]="true">
   <p>
