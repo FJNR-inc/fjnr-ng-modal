@@ -48,7 +48,6 @@ $line-height-normal: 22px;
 $font-little: 10px;
 $link-color-hover: $color-main;
 
-
 $nt-0: #E6DCCF;
 $nt-1: #FFFFFF;
 $nt-2: #F7EDD2;
@@ -65,6 +64,11 @@ $nt-12: #2A7358;
 $nt-13: #0D4436;
 $nt-14: #0F2822;
 $nt-15: #B8DAFF;
+$nt-16: #9ac1ec;
+$nt-17: #808080;
+$nt-18: #5f5e5e;
+$nt-19: #b94210;
+$nt-20: #dc9c4c;
 
 $nt-background-color: $nt-1;
 $nt-background-color-light: #FCF7EF;
@@ -75,8 +79,13 @@ $border-calendar: #899592;
 
 $color-warning-border: #FFEEBA;
 $color-warning-background: $nt-5;
+$color-warning-hover-background: $nt-20;
 $color-information-background: $nt-15;
+$color-information-hover-background: $nt-16;
 $color-danger-background: $nt-9;
+$color-danger-hover-background: $nt-19;
+$color-default-background: $nt-17;
+$color-default-hover-background: $nt-17;
 $color-warning-background-hover: darken($color-warning-background, 50%);
 $color-warning-text: $nt-text;
 $color-warning-text-hover: white;
