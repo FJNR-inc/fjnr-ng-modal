@@ -26,15 +26,8 @@ export class AppComponent {
   }
 
   actionButton(event) {
-    const modal = this.myModalService.get(this.name);
-    // console.log(event)
-    if (event === 'ok') {
-      // console.log('ok');
-      this.toogleModal(this.name);
-    } else if (event === 'close') {
-      // console.log('close');
-    } else if (event === 'information') {
-      // console.log('information');
-    }
+    // if (event === 'btn-info') {
+    //   this.toogleModal('test_modal');
+    // }
   }
 }

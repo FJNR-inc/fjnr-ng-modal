@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Test modal</h2>\n<ul>\n  <li>\n    <a (click)=\"toogleModal('test_modal')\">Test modal</a>\n  </li>\n</ul>\n\n<app-nt-modal name=\"test_modal\"\n              typeModal=\"information\"\n              title=\"modal\"\n              [buttons]=\"[\n                {\n                  label: 'ok',\n                  type: 'warning',\n                  id: 'btn-ok'\n                },\n                {\n                  label: 'close',\n                  type: 'default',\n                  id: 'btn-close'\n                },\n                {\n                  label: 'information',\n                  type: 'information',\n                  id: 'btn-info'\n                }\n              ]\"\n              (clickOnButton)=\"actionButton($event)\"\n              maxWidth=\"600px\"\n              [autoClose]=\"true\">\n  <p>\n    {{ 'profile.cancel_reservation_text_1' }}\n  </p>\n  <p>\n    {{ 'profile.cancel_reservation_text_2' }}\n  </p>\n</app-nt-modal>\n"
+module.exports = "\n<div class=\"header\">\n  <a href=\"https://github.com/FJNR-inc/fjnr-ng-modal\" class=\"header__item\">\n    Go to the Github repository\n  </a>\n</div>\n\n<div class=\"content\">\n  package to have modal windows for his project angular.\n\n  <div class=\"content\">\n    <div class=\"content__section\">\n      <div class=\"content__section__title\">\n        Demo:\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal information: <a href=\"#\" (click)=\"toogleModal('test_modal')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal\"\n                      typeModal=\"information\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'information',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal default: <a href=\"#\" (click)=\"toogleModal('test_modal_1')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_1\"\n                      typeModal=\"default\"\n                      titleModal=\"modal\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal danger: <a href=\"#\" (click)=\"toogleModal('test_modal_2')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_2\"\n                      typeModal=\"danger\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'danger',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal warning: <a href=\"#\" (click)=\"toogleModal('test_modal_3')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_3\"\n                      typeModal=\"warning\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'warning',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Add many buttons: <a href=\"#\" (click)=\"toogleModal('test_modal_4')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_4\"\n                      typeModal=\"information\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'warning',\n                          type: 'warning',\n                          id: 'btn-warning'\n                        },\n                        {\n                          label: 'info',\n                          type: 'info',\n                          id: 'btn-info'\n                        },\n                        {\n                          label: 'close',\n                          type: 'default',\n                          id: 'btn-close'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -66,18 +66,9 @@ var AppComponent = /** @class */ (function () {
         modal.toggle();
     };
     AppComponent.prototype.actionButton = function (event) {
-        var modal = this.myModalService.get(this.name);
-        // console.log(event)
-        if (event === 'ok') {
-            // console.log('ok');
-            this.toogleModal(this.name);
-        }
-        else if (event === 'close') {
-            // console.log('close');
-        }
-        else if (event === 'information') {
-            // console.log('information');
-        }
+        // if (event === 'btn-info') {
+        //   this.toogleModal('test_modal');
+        // }
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -143,7 +134,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-component\" (click)=\"clickOverlay($event)\" [style.display]=\"!show ? 'none' : 'block'\" [ngClass]=\"typeModal\">\n  <div class=\"modal-component__content\">\n    <div class=\"modal-component__content__reveal\" [style.width]=\"maxWidth\">\n      <div class=\"modal-component__content__reveal__header\">\n        <a (click)=\"close()\" class=\"fa_times_close\"> <i class=\"fa fa-times\" aria-hidden=\"true\"> </i></a>\n        <div>{{ title }}</div>\n        <span><i [class]=\"iconModal\"></i></span>\n      </div>\n      <div class=\"modal-component__content__reveal__content\" #modalContent>\n        <ng-content></ng-content>\n      </div>\n      <div class=\"modal-component__content__reveal__content__buttons\">\n        <button *ngFor=\"let button of buttons\" (click)=\"clickButton(button.id)\" [ngClass]=\"button.type\"\n                class=\"modal-component__content__reveal__content__buttons__button nt-button\">\n          {{ button.label }}\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"modal-component\" (click)=\"clickOverlay($event)\" [style.display]=\"!show ? 'none' : 'block'\" [ngClass]=\"typeModal\">\n  <div class=\"modal-component__content\">\n    <div class=\"modal-component__content__reveal\" [style.width]=\"maxWidth\">\n      <div class=\"modal-component__content__reveal__header\" title=\"{{ titleModal }}\">\n        <a (click)=\"close()\" class=\"fa_times_close\"> <i class=\"fa fa-times\" aria-hidden=\"true\"> </i></a>\n        <div>{{ titleModal }}</div>\n        <span><i [class]=\"iconModal\"></i></span>\n      </div>\n      <div class=\"modal-component__content__reveal__content\" #modalContent>\n        <ng-content></ng-content>\n      </div>\n      <div class=\"modal-component__content__reveal__content__buttons\">\n        <button *ngFor=\"let button of buttons\" (click)=\"clickButton(button.id)\" [ngClass]=\"button.type\"\n                class=\"modal-component__content__reveal__content__buttons__button nt-button\">\n          {{ button.label }}\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -201,9 +192,9 @@ var NtModalComponent = /** @class */ (function () {
         if (this.buttons === null) {
             this.buttons = [
                 {
-                    label: 'ok',
+                    label: 'close',
                     type: this.typeModal,
-                    id: 'btn-ok'
+                    id: 'btn-close'
                 }
             ];
         }
@@ -252,6 +243,9 @@ var NtModalComponent = /** @class */ (function () {
         }
     };
     NtModalComponent.prototype.clickButton = function (event) {
+        if (event === 'btn-close') {
+            this.toggle();
+        }
         this.clickOnButton.emit(event);
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -261,7 +255,7 @@ var NtModalComponent = /** @class */ (function () {
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
-    ], NtModalComponent.prototype, "title", void 0);
+    ], NtModalComponent.prototype, "titleModal", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)

@@ -1,44 +1,117 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Test modal</h2>
-<ul>
-  <li>
-    <a (click)="toogleModal('test_modal')">Test modal</a>
-  </li>
-</ul>
 
-<app-nt-modal name="test_modal"
-              typeModal="information"
-              title="modal"
-              [buttons]="[
-                {
-                  label: 'ok',
-                  type: 'warning',
-                  id: 'btn-ok'
-                },
-                {
-                  label: 'close',
-                  type: 'default',
-                  id: 'btn-close'
-                },
-                {
-                  label: 'information',
-                  type: 'information',
-                  id: 'btn-info'
-                }
-              ]"
-              (clickOnButton)="actionButton($event)"
-              maxWidth="600px"
-              [autoClose]="true">
-  <p>
-    {{ 'profile.cancel_reservation_text_1' }}
-  </p>
-  <p>
-    {{ 'profile.cancel_reservation_text_2' }}
-  </p>
-</app-nt-modal>
+<div class="header">
+  <a href="https://github.com/FJNR-inc/fjnr-ng-modal" class="header__item">
+    Go to the Github repository
+  </a>
+</div>
+
+<div class="content">
+  package to have modal windows for his project angular.
+
+  <div class="content">
+    <div class="content__section">
+      <div class="content__section__title">
+        Demo:
+      </div>
+      <div class="content__section__content">
+        <div>Test modal information: <a (click)="toogleModal('test_modal')">Click there</a></div>
+        <app-nt-modal name="test_modal"
+                      typeModal="information"
+                      titleModal="modal"
+                      [buttons]="[
+                        {
+                          label: 'close',
+                          type: 'information',
+                          id: 'btn-info'
+                        }
+                      ]"
+                      (clickOnButton)="actionButton($event)"
+                      maxWidth="600px"
+                      [autoClose]="true">
+          <p>Test 1</p>
+          <p>Test 2</p>
+        </app-nt-modal>
+      </div>
+      <div class="content__section__content">
+        <div>Test modal default: <a (click)="toogleModal('test_modal_1')">Click there</a></div>
+        <app-nt-modal name="test_modal_1"
+                      typeModal="default"
+                      titleModal="modal"
+                      (clickOnButton)="actionButton($event)"
+                      maxWidth="600px"
+                      [autoClose]="true">
+          <p>Test 1</p>
+          <p>Test 2</p>
+        </app-nt-modal>
+      </div>
+      <div class="content__section__content">
+        <div>Test modal danger: <a (click)="toogleModal('test_modal_2')">Click there</a></div>
+        <app-nt-modal name="test_modal_2"
+                      typeModal="danger"
+                      titleModal="modal"
+                      [buttons]="[
+                        {
+                          label: 'close',
+                          type: 'danger',
+                          id: 'btn-info'
+                        }
+                      ]"
+                      (clickOnButton)="actionButton($event)"
+                      maxWidth="600px"
+                      [autoClose]="true">
+          <p>Test 1</p>
+          <p>Test 2</p>
+        </app-nt-modal>
+      </div>
+      <div class="content__section__content">
+        <div>Test modal warning: <a (click)="toogleModal('test_modal_3')">Click there</a></div>
+        <app-nt-modal name="test_modal_3"
+                      typeModal="warning"
+                      titleModal="modal"
+                      [buttons]="[
+                        {
+                          label: 'close',
+                          type: 'warning',
+                          id: 'btn-info'
+                        }
+                      ]"
+                      (clickOnButton)="actionButton($event)"
+                      maxWidth="600px"
+                      [autoClose]="true">
+          <p>Test 1</p>
+          <p>Test 2</p>
+        </app-nt-modal>
+      </div>
+      <div class="content__section__content">
+        <div>Add many buttons: <a (click)="toogleModal('test_modal_4')">Click there</a></div>
+        <app-nt-modal name="test_modal_4"
+                      typeModal="information"
+                      titleModal="modal"
+                      [buttons]="[
+                        {
+                          label: 'warning',
+                          type: 'warning',
+                          id: 'btn-warning'
+                        },
+                        {
+                          label: 'info',
+                          type: 'info',
+                          id: 'btn-info'
+                        },
+                        {
+                          label: 'close',
+                          type: 'default',
+                          id: 'btn-close'
+                        }
+                      ]"
+                      (clickOnButton)="actionButton($event)"
+                      maxWidth="600px"
+                      [autoClose]="true">
+          <p>Test 1</p>
+          <p>Test 2</p>
+        </app-nt-modal>
+      </div>
+    </div>
+  </div>
+</div>
+

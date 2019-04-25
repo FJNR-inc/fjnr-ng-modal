@@ -8,7 +8,7 @@ import { MyModalService} from './services/my-modal/my-modal.service';
 })
 export class NtModalComponent implements OnInit {
   @Input() name: string;
-  @Input() title;
+  @Input() titleModal;
   @Input() typeModal: 'default' | 'danger' | 'information' | 'warning' | 'form';
   @Input() generalClass: string;
   @Input() buttons = null;
@@ -39,9 +39,9 @@ export class NtModalComponent implements OnInit {
     if (this.buttons === null) {
       this.buttons = [
         {
-          label: 'ok',
+          label: 'close',
           type: this.typeModal,
-          id: 'btn-ok'
+          id: 'btn-close'
         }
       ];
     }
@@ -105,6 +105,10 @@ export class NtModalComponent implements OnInit {
   }
 
   clickButton(event) {
+    if (event === 'btn-close') {
+      this.toggle();
+    }
+
     this.clickOnButton.emit(event);
   }
 }

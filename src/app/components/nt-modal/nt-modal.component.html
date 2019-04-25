@@ -1,9 +1,9 @@
 <div class="modal-component" (click)="clickOverlay($event)" [style.display]="!show ? 'none' : 'block'" [ngClass]="typeModal">
   <div class="modal-component__content">
     <div class="modal-component__content__reveal" [style.width]="maxWidth">
-      <div class="modal-component__content__reveal__header">
+      <div class="modal-component__content__reveal__header" title="{{ titleModal }}">
         <a (click)="close()" class="fa_times_close"> <i class="fa fa-times" aria-hidden="true"> </i></a>
-        <div>{{ title }}</div>
+        <div>{{ titleModal }}</div>
         <span><i [class]="iconModal"></i></span>
       </div>
       <div class="modal-component__content__reveal__content" #modalContent>
