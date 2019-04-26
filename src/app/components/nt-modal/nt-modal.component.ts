@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { MyModalService} from './services/my-modal/my-modal.service';
+import { MyModalService} from '../../services/my-modal/my-modal.service';
 
 @Component({
   selector: 'app-nt-modal',

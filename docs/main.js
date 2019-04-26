@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"header\">\n  <a href=\"https://github.com/FJNR-inc/fjnr-ng-modal\" class=\"header__item\">\n    Go to the Github repository\n  </a>\n</div>\n\n<div class=\"content\">\n  package to have modal windows for his project angular.\n\n  <div class=\"content\">\n    <div class=\"content__section\">\n      <div class=\"content__section__title\">\n        Demo:\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal information: <a href=\"#\" (click)=\"toogleModal('test_modal')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal\"\n                      typeModal=\"information\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'information',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal default: <a href=\"#\" (click)=\"toogleModal('test_modal_1')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_1\"\n                      typeModal=\"default\"\n                      titleModal=\"modal\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal danger: <a href=\"#\" (click)=\"toogleModal('test_modal_2')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_2\"\n                      typeModal=\"danger\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'danger',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal warning: <a href=\"#\" (click)=\"toogleModal('test_modal_3')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_3\"\n                      typeModal=\"warning\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'warning',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Add many buttons: <a href=\"#\" (click)=\"toogleModal('test_modal_4')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_4\"\n                      typeModal=\"information\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'warning',\n                          type: 'warning',\n                          id: 'btn-warning'\n                        },\n                        {\n                          label: 'info',\n                          type: 'info',\n                          id: 'btn-info'\n                        },\n                        {\n                          label: 'close',\n                          type: 'default',\n                          id: 'btn-close'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "\n<div class=\"header\">\n  <a href=\"https://github.com/FJNR-inc/fjnr-ng-modal\" class=\"header__item\">\n    Go to the Github repository\n  </a>\n</div>\n\n<div class=\"content\">\n  package to have modal windows for his project angular.\n\n  <div class=\"content\">\n    <div class=\"content__section\">\n      <div class=\"content__section__title\">\n        Demo:\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal information: <a (click)=\"toogleModal('test_modal')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal\"\n                      typeModal=\"information\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'information',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal default: <a (click)=\"toogleModal('test_modal_1')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_1\"\n                      typeModal=\"default\"\n                      titleModal=\"modal\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal danger: <a (click)=\"toogleModal('test_modal_2')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_2\"\n                      typeModal=\"danger\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'danger',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal warning: <a (click)=\"toogleModal('test_modal_3')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_3\"\n                      typeModal=\"warning\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'close',\n                          type: 'warning',\n                          id: 'btn-info'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n      <div class=\"content__section__content\">\n        <div>Test modal with many buttons: <a (click)=\"toogleModal('test_modal_4')\">Click there</a></div>\n        <app-nt-modal name=\"test_modal_4\"\n                      typeModal=\"information\"\n                      titleModal=\"modal\"\n                      [buttons]=\"[\n                        {\n                          label: 'warning',\n                          type: 'warning',\n                          id: 'btn-warning'\n                        },\n                        {\n                          label: 'info',\n                          type: 'info',\n                          id: 'btn-info'\n                        },\n                        {\n                          label: 'close',\n                          type: 'default',\n                          id: 'btn-close'\n                        }\n                      ]\"\n                      (clickOnButton)=\"actionButton($event)\"\n                      maxWidth=\"600px\"\n                      [autoClose]=\"true\">\n          <p>Test 1</p>\n          <p>Test 2</p>\n        </app-nt-modal>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -46,7 +46,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _components_nt_modal_services_my_modal_my_modal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/nt-modal/services/my-modal/my-modal.service */ "./src/app/components/nt-modal/services/my-modal/my-modal.service.ts");
+/* harmony import */ var _services_my_modal_my_modal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/my-modal/my-modal.service */ "./src/app/services/my-modal/my-modal.service.ts");
 
 
 
@@ -75,7 +75,7 @@ var AppComponent = /** @class */ (function () {
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html")
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_components_nt_modal_services_my_modal_my_modal_service__WEBPACK_IMPORTED_MODULE_2__["MyModalService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_my_modal_my_modal_service__WEBPACK_IMPORTED_MODULE_2__["MyModalService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -161,7 +161,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NtModalComponent", function() { return NtModalComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_my_modal_my_modal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/my-modal/my-modal.service */ "./src/app/components/nt-modal/services/my-modal/my-modal.service.ts");
+/* harmony import */ var _services_my_modal_my_modal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/my-modal/my-modal.service */ "./src/app/services/my-modal/my-modal.service.ts");
 
 
 
@@ -322,6 +322,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _nt_modal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nt-modal.component */ "./src/app/components/nt-modal/nt-modal.component.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _services_my_modal_my_modal_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/my-modal/my-modal.service */ "./src/app/services/my-modal/my-modal.service.ts");
+
 
 
 
@@ -339,6 +341,9 @@ var NtModalModule = /** @class */ (function () {
             declarations: [
                 _nt_modal_component__WEBPACK_IMPORTED_MODULE_3__["NtModalComponent"],
             ],
+            providers: [
+                _services_my_modal_my_modal_service__WEBPACK_IMPORTED_MODULE_5__["MyModalService"]
+            ],
             exports: [
                 _nt_modal_component__WEBPACK_IMPORTED_MODULE_3__["NtModalComponent"],
             ]
@@ -351,10 +356,10 @@ var NtModalModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/nt-modal/services/my-modal/my-modal.service.ts":
-/*!***************************************************************************!*\
-  !*** ./src/app/components/nt-modal/services/my-modal/my-modal.service.ts ***!
-  \***************************************************************************/
+/***/ "./src/app/services/my-modal/my-modal.service.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/services/my-modal/my-modal.service.ts ***!
+  \*******************************************************/
 /*! exports provided: MyModalService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

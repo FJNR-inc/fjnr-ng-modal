@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { MyModalService } from './components/nt-modal/services/my-modal/my-modal.service';
+import { MyModalService } from './services/my-modal/my-modal.service';
 
 @Component({
   selector: 'app-root',
